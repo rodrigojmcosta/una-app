@@ -1,22 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/UNA_logo.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+        <img src={logo} className="App-logo" alt="logo" width={'500px'} height={'100px'} />
+        <p className='exercise-description'>
+          Exercício feito em aula com intuito de aprender a criar uma aplicação React.js.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://ulife.com.br"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Learn React
+        > 
+          Acessar o Ulife
         </a>
       </header>
     </div>

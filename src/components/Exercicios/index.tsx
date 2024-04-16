@@ -6,7 +6,7 @@ import Ex4 from "./Ex4";
 import Ex5 from "./Ex5";
 import Ex6 from "./Ex6";
 import Ex7 from "./Ex7";
-import UnaHeader from "./UnaHeader";
+import UnaHeader from "../UnaHeader";
 
 const Exercicios: React.FC = () => {
   return (

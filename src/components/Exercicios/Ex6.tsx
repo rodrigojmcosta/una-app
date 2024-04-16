@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../App.css';
+import '../../App.css';
 
 const Ex6: React.FC = () => {
   const [table, setTable] = useState<number[][]>([]);

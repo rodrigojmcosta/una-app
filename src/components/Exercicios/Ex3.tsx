@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css';
+import '../../App.css';
 
 const Ex3: React.FC = () => {
   const [nome, setNome] = useState<string>('');

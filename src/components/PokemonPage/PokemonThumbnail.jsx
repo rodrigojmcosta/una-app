@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Description from "./Description";
+import { colours } from "./PokemonColors";
 
 const PokemonThumbnail = ({
   id,
@@ -21,19 +22,17 @@ const PokemonThumbnail = ({
   bs5,
   bs6,
 }) => {
-
-  const style = `thumb-container ${type}`;
   const [show, setShow] = useState(false);
 
   return (
-    <div className={style}>
+    <div className='thumb-container' style={{backgroundColor: colours[type]}}>
       <div className="number">
         <small>#0{id}</small>
       </div>
       <img src={image} alt={name} />
       <div className="detail-wrapper">
-        <h3>{name.toUpperCase()}</h3>
-        <small>Type : {type}</small>
+        <span>{name.toUpperCase()}</span>
+        <small>Type: {type} &nbsp;</small>
         <button className="pokeinfo"
           onClick={() => setShow(!show)}>
           {

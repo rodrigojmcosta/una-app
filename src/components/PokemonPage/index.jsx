@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PokemonThumbnail from "./PokemonThumbnail";
+import './styles.css';
 
 function PokemonPage() {
 
@@ -34,7 +35,7 @@ function PokemonPage() {
 
   return (
     <div className="app-container">
-      <h1>Pokemon Kingdom .</h1>
+      <h1>POKÉDEX</h1>
 
       <div className="pokemon-container">
         <div className="all-container">
@@ -43,7 +44,7 @@ function PokemonPage() {
               id={pokemon.id}
               name={pokemon.name}
               image=
-              {pokemon.sprites.other.dream_world.front_default}
+              {pokemon.sprites.front_default}
               type={pokemon.types[0].type.name}
               key={index}
               height={pokemon.height}

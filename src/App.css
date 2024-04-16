@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: start;
 }
 
 .App-logo {
@@ -38,4 +38,61 @@
 .exercise-description {
   width: 50%;
   text-align: center;
+}
+
+.exercise-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.labeled-input {
+  display: flex;
+  align-self: flex-start;
+}
+
+.buttons-holder {
+  display: flex;
+  gap: 10px;
+}
+
+.form-ex3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.calculator {
+  width: 280px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  /* margin: 0 auto; */
+}
+
+.display {
+  background-color: #a1a1a1;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #f52f2f;
 }

@@ -4,7 +4,6 @@ import Exercicios from '../pages/ExerciciosPage';
 import Home from '../pages/Home';
 import PokemonPage from '../pages/PokemonPage';
 
-
 const RoutesApp: React.FC = () => {
 
   return (
@@ -18,4 +17,4 @@ const RoutesApp: React.FC = () => {
   );
 };
 
-export default RoutesApp;
+export default RoutesApp; 

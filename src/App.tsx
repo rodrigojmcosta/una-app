@@ -1,12 +1,10 @@
 import './App.css';
-import Exercicios from './components/Exercicios';
-import PokemonPage from './components/PokemonPage';
+import RoutesApp from './RoutesApp';
 
 function App() {
   return (
     <div className="App">
-      {/* <Exercicios/> */}
-      <PokemonPage/>
+      <RoutesApp />
     </div>
   );
 }

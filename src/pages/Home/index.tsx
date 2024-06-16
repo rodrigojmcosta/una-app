@@ -1,16 +1,31 @@
-import { Link } from "react-router-dom";
+import { faAdd, faBookAtlas, faBookOpen, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import FeatureCard from './FeatureCard';
+import './styles.css';
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <>
-      <nav>
-        <ul>
-          <li><Link to="/exercicios">Exercícios</Link></li>
-          <li><Link to="/pokemon">Pokédex</Link></li>
-        </ul>
-      </nav>
-    </>
+    <div className='home-content'>
+      <h1 className='h1-meus-atalhos'>Atalhos</h1>
+      <div className='container-shortcuts-painel'>
+        <FeatureCard feature={"Cadastrar Aluno"} icon={faUserGraduate}
+          to={() => navigate("/")} iconDimensionClass='fa-icon32x32'
+        />
+        <FeatureCard feature={"Cadastrar Livro"} icon={faBookOpen}
+          to={() => navigate('/')} iconDimensionClass='fa-icon32x32'
+        />
+        <FeatureCard feature={"Consultar Livros"} icon={faBookAtlas}
+          to={() => navigate("/")} iconDimensionClass='fa-icon32x32'
+        />
+        <FeatureCard feature={"Adicionar Empréstimo"} icon={faAdd}
+          to={() => navigate("/")} iconDimensionClass='fa-icon32x32'
+        />
+      </div>
+    </div>
   )
 }
 
-export default Home;
+export default Home

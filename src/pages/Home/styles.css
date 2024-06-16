@@ -1,0 +1,161 @@
+.page {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.home-content {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.home-notification-details-label {
+  display: flex;
+  text-wrap: balance;
+  flex-direction: row;
+  align-items: center;
+  padding: 32px;
+  gap: 24px;
+}
+
+.home-show-notification-label {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  padding: 32px;
+  padding-right: 10px;
+  gap: 24px;
+  text-wrap: nowrap;
+}
+
+.home-close-notifications-button {
+  height: 210%;
+}
+
+.h1-meus-atalhos {
+  text-align: start;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.container-shortcuts-painel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.feature-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.fa-icon32x32 {
+  width: 32px;
+  height: 32px;
+  color: #3D89C9;
+}
+
+@media (max-width: 375px) {
+  .notification-card-home .MuiIconButton-root {
+      left: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .notification-card-home {
+      padding: 24px;
+      height: 120px;
+      column-gap: 16px;
+  }
+
+  .home-notification-icon-holder {
+      font-size: 20px;
+      margin-bottom: 37px;
+  }
+
+  .home-notification-details-holder {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      column-gap: 8px;
+      height: 100%;
+  }
+
+  .home-close-notifications-button {
+      height: 150%;
+  }
+
+  .show-notification-label {
+      text-wrap: nowrap;
+  }
+
+}
+
+@media (max-width: 899px) {
+
+  .home-notification-label {
+      left: 12%;
+  }
+
+  .home-show-notification-label {
+      text-wrap: nowrap;
+      left: 75%;
+  }
+
+  .container-shortcuts-painel {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      height: 100%;
+  }
+
+  .feature-card {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 905px) {
+  .home-notification-details-label {
+      padding-right: 12px;
+  }
+}
+
+.boas-vindas-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.boas-vindas-modal-header-close {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #383838;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.boas-vindas-modal-header-close :hover {
+  cursor: pointer;
+}

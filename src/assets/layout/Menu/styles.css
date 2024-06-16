@@ -1,0 +1,135 @@
+nav {
+  width: 324px;
+  height: 100%;
+  background: var(--gradient-green-dark, linear-gradient(204deg, #63a8e0 1.62%, #316fa1 29.26%));
+  color: var(--grey-light-lightest-2, #F4F2F2);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  position: fixed;
+}
+
+.overflow-nav-menu {
+  max-height: calc(100vh - 151px);
+  overflow: auto;
+  height: auto;
+}
+
+.overflow-nav-menu::-webkit-scrollbar {
+  width: 7px;
+}
+
+.overflow-nav-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #969696;
+}
+
+.nav-header {
+  width: 100%;
+  height: 151px;
+  background: transparent;
+  border-bottom: 1px solid rgba(253, 253, 253, 0.5);
+  border-right: 1px solid rgba(253, 253, 253, 0.5);
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+.menu-burguer {
+  display: none;
+}
+
+.nav-header img {
+  width: 150px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-list{
+  width: 100%;
+  padding-top: 32px;
+  padding-left: 56px;
+  padding-right: 31px;
+  box-sizing: border-box;
+}
+
+.mobile-actions {
+  display: none;
+}
+
+.accessibility {
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.accessibility-hide {
+  display: none;
+}
+
+@keyframes growUp {
+  from {
+    height: 92px;
+  }
+  to {
+    height: 100vh; /* ou qualquer altura desejada */
+  }
+}
+
+@media (max-width: 899px) {
+  nav {
+      width: 100%;
+      height: 92px;
+      position: relative;
+  }
+
+  .nav-list {
+      display: none;
+  }
+
+  .nav-header {
+      padding: 30px 24px; 
+      height: 92px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .menu-burguer {
+      display: flex;
+      border: none;
+      background: none;
+      text-decoration: none;
+      color: #FFF;
+      padding: 0;
+  }
+
+  .nav-header img {
+      width: 86px;
+  }
+
+  .mobile-nav {
+      position: absolute;
+      height: 100vh;
+      z-index: 99;
+      animation: growUp 0.5s ease;
+      overflow: auto;
+  }
+
+  .mobile-actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+  }
+
+  .opened-menu {
+      display: flex;
+  }
+}

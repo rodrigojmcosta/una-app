@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../../App.css';
+import '../../index.css';
 
 const Ex2: React.FC = () => {
   const [rows, setRows] = useState<number>(0);

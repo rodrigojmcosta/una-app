@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../../../App.css';
+import '../../../index.css';
 import Line from './Line.jsx';
 
 function Ex1() {

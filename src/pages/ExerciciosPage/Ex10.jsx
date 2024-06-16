@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../App.css';
+import '../../index.css';
 
 function Ex10() {
     const [display, setDisplay] = useState('0');

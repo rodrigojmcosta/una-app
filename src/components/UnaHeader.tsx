@@ -1,5 +1,5 @@
 import logo from '../assets/UNA_logo.png';
-import '../App.css';
+import '../index.css';
 
 const UnaHeader: React.FC = () => {
 	return (

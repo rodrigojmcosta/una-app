@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../App.css';
+import '../../index.css';
 
 const Ex4: React.FC = () => {
   const [n, setN] = useState(0);

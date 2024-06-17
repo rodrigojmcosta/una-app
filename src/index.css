@@ -12,9 +12,6 @@ code {
     monospace;
 }
 
-
-
-
 .width-100 {
   width: 100%;
 }
@@ -25,6 +22,30 @@ code {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+}
+
+.back-button {
+	border: none;
+	background: transparent;
+	text-decoration: none;
+	color: #316fa1;
+	text-align: start;
+	width: fit-content;
+
+	/* Body/Urderline */
+	font-family: 'Unimed-Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px; /* 24px */
+}
+
+.back-button:hover {
+	cursor: pointer;
+}
+
+.back-button svg {
+	color: #316fa1;
 }
 
 /*Estilos aplicados aos exercícios*/

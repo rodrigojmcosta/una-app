@@ -10,7 +10,7 @@ export const CadastrarAlunoValidation = Yup.object().shape({
     .required('Campo telefone é obrigatório'),
   matricula: Yup.string()
     .required('Campo matrícula é obrigatório'),
-    cpf: Yup.string().test('cpf-valid', 'CPF inválido ou incorreto', function (value) {
-      return cpfValidator(value || '');
-    }).required('CPF inválido (obrigatório)')
+  cpf: Yup.string().test('cpf-valid', 'CPF inválido ou incorreto', function (value) {
+    return cpfValidator(value || '');
+  }).required('CPF inválido (obrigatório)')
 })

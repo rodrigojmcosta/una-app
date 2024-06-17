@@ -24,9 +24,29 @@ export const cadastraLivro = async (livroData: CadastrarLivroRequest): Promise<R
   }
 };
 
+export const reservaLivro = async (cpfAluno: string, codigoLivro: number): Promise<Response | null> => {
+  try {
+    const response = await apiBase.post(`/reservar/${codigoLivro}/${cpfAluno}`);
+    return response;
+  } catch (error: any) {
+    console.log({ error });
+    return error.response;
+  }
+};
+
 export const getLivros = async (): Promise<Response | null> => {
   try {
     const response = await apiBase.get('/livros');
+    return response;
+  } catch (error) {
+    console.log({ error });
+    return null;
+  }
+};
+
+export const getLivroByCodigo = async (codigo: number): Promise<Response | null> => {
+  try {
+    const response = await apiBase.get(`/livros/${codigo}`);
     return response;
   } catch (error) {
     console.log({ error });

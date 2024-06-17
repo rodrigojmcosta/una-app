@@ -2,9 +2,10 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Page from '../assets/layout/Page';
 import CadastroAlunos from '../pages/Alunos/CadastroAlunos';
-import CadastroLivros from '../pages/Livros/CadastroLivros';
 import Home from '../pages/Home';
+import CadastroLivros from '../pages/Livros/CadastroLivros';
 import CatalogoLivros from '../pages/Livros/CatalogoLivros';
+import ReservaLivros from '../pages/Livros/ReservaLivros';
 
 const RoutesApp: React.FC = () => {
 
@@ -29,6 +30,11 @@ const RoutesApp: React.FC = () => {
       <Route path="/livros/catalogo" element=
         {
           <Page content={<CatalogoLivros />} />
+        }
+      />
+      <Route path="/livros/reserva" element=
+        {
+          <Page content={<ReservaLivros />} />
         }
       />
       {/* <Route path="/pokemon" element=

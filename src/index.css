@@ -34,7 +34,7 @@ code {
   margin-left: 10px;
 
   /* Body/Urderline */
-  font-family: "Unimed-Sans";
+  font-family: sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -61,7 +61,7 @@ code {
   width: fit-content;
 
   /* Body/Urderline */
-  font-family: "Unimed-Sans";
+  font-family: sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;

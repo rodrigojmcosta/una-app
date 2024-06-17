@@ -72,21 +72,23 @@ export const sxLabeledOutlinedInput: SxProps = {
 }
 
 export const sxInputLarge: SxProps = {
-  fontFamily: 'Unimed-Sans',
+  fontFamily: 'sans-serif',
   color: '#383838',
   fontWeight: 400,
   fontSize: '14px',
   minWidth: '400px',
+  backgroundColor: '#FFFF',
   '@media (max-width: 768px)': {
     minWidth: 'unset'
   }
 }
 
 export const sxInputSmall: SxProps = {
-  fontFamily: 'Unimed-Sans',
+  fontFamily: 'sans-serif',
   color: '#383838',
   fontWeight: 400,
   fontSize: '14px',
+  backgroundColor: '#FFFF',
   width: '300px',
   '@media (max-width: 768px)': {
     maxWidth: 'unset',

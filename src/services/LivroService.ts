@@ -33,7 +33,6 @@ export const reservaLivro = async (cpfAluno: string, codigoLivro: number): Promi
     return error.response;
   }
 };
-
 export const getLivros = async (): Promise<Response | null> => {
   try {
     const response = await apiBase.get('/livros');
@@ -61,5 +60,15 @@ export const getPendencias = async (): Promise<Response | null> => {
   } catch (error) {
     console.log({ error });
     return null;
+  }
+};
+
+export const devolveLivro = async (codigoLivro: number): Promise<Response | null> => {
+  try {
+    const response = await apiBase.post(`/devolver/${codigoLivro}`);
+    return response;
+  } catch (error: any) {
+    console.log({ error });
+    return error.response;
   }
 };

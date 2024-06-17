@@ -7,6 +7,7 @@ import CadastroLivros from '../pages/Livros/CadastroLivros';
 import CatalogoLivros from '../pages/Livros/CatalogoLivros';
 import ReservaLivros from '../pages/Livros/ReservaLivros';
 import Pendencias from '../pages/Pendencias';
+import DevolucaoLivros from '../pages/Livros/DevolucaoLivros';
 
 const RoutesApp: React.FC = () => {
 
@@ -41,6 +42,11 @@ const RoutesApp: React.FC = () => {
       <Route path="/pendencias" element=
         {
           <Page content={<Pendencias />} />
+        }
+      />
+      <Route path="/devolucao" element=
+        {
+          <Page content={<DevolucaoLivros />} />
         }
       />
       {/* <Route path="/pokemon" element=

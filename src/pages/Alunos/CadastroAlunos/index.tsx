@@ -6,6 +6,7 @@ import { CadastrarAlunoValidation } from '../../../interfaces/validation/Aluno/C
 import { cadastrarFichaAluno } from '../../../services/AlunoService';
 import { cellPhoneMask } from '../../../utils/CellPhoneMask';
 import { cpfMask } from '../../../utils/CpfMask';
+import BackButton from '../../../components/BackButton';
 
 const CadastroAlunos: React.FC = () => {
 
@@ -152,6 +153,7 @@ const CadastroAlunos: React.FC = () => {
             >
               <Typography>CADASTRAR</Typography>
             </Button>
+            <BackButton/>
           </Box>
         </form>
       </div>

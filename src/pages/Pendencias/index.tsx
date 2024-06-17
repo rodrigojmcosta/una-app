@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { sxTitle } from '../../assets/styles/CommonSxProps';
+import BackButton from '../../components/BackButton';
 import { PendenciaResponse } from '../../interfaces/entities/PendenciaResponse';
 import { getPendencias } from '../../services/LivroService';
 import PendenciaCard from './PendenciaCard';
@@ -37,6 +38,7 @@ const Pendencias: React.FC = () => {
             </>
           }
         </div>
+        <BackButton />
       </div>
     </>
   )

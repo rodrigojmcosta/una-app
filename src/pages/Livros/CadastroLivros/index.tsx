@@ -5,6 +5,7 @@ import { CadastrarLivroRequest } from '../../../interfaces/entities/Livro/Cadast
 import { CadastrarLivroValidation } from '../../../interfaces/validation/Livro/CadastrarLivroValidation';
 import { cadastraLivro } from '../../../services/LivroService';
 import { onlyNumbers } from '../../../utils/OnlyNumbers';
+import BackButton from '../../../components/BackButton';
 
 const CadastroLivros: React.FC = () => {
 
@@ -187,6 +188,7 @@ const CadastroLivros: React.FC = () => {
             >
               <Typography>CADASTRAR</Typography>
             </Button>
+            <BackButton/>
           </Box>
         </form>
       </div>

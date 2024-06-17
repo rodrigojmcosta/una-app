@@ -1,14 +1,14 @@
 body {
   margin: 0 !important;
-  font-family: sans-serif ,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -25,56 +25,60 @@ code {
 }
 
 .search-button {
-	border: none;
-	background: transparent;
-	text-decoration: none;
-	color: #316fa1;
-	text-align: start;
-	width: fit-content;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  color: #316fa1;
+  text-align: start;
+  width: fit-content;
   margin-left: 10px;
 
-	/* Body/Urderline */
-	font-family: 'Unimed-Sans';
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 24px; /* 24px */
+  /* Body/Urderline */
+  font-family: "Unimed-Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 24px */
 }
 
 .search-button:hover {
-	cursor: pointer;
-	color: #63a8e0;
-  background-color: #FFFF;
+  cursor: pointer;
+  color: #63a8e0;
+  background-color: #ffff;
   border-radius: 10px;
 }
 
 .search-button svg {
-	color: #316fa1;
+  color: #316fa1;
 }
 
 .back-button {
-	border: none;
-	background: transparent;
-	text-decoration: none;
-	color: #316fa1;
-	text-align: start;
-	width: fit-content;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  color: #4c4c4c;
+  text-align: start;
+  width: fit-content;
 
-	/* Body/Urderline */
-	font-family: 'Unimed-Sans';
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 24px; /* 24px */
+  /* Body/Urderline */
+  font-family: "Unimed-Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 24px */
 }
 
 .back-button:hover {
-	cursor: pointer;
-	color: #626466;
+  cursor: pointer;
+  color: #313131;
 }
 
 .back-button svg {
-	color: #28292b;
+  color: #4c4c4c;
+}
+
+.back-button:hover svg {
+  color: #313131;
 }
 
 /*Estilos aplicados aos exercícios*/

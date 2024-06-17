@@ -4,6 +4,7 @@ import { Box, Button, OutlinedInput, Typography } from '@mui/material';
 import { FormikProps, useFormik } from 'formik';
 import { useState } from 'react';
 import { sxButton, sxFormBox, sxFormError, sxInputSmall, sxLabel, sxLabeledOutlinedInput, sxTitle } from '../../../assets/styles/CommonSxProps';
+import BackButton from '../../../components/BackButton';
 import { LivroResponse } from '../../../interfaces/entities/Livro/LivroResponse';
 import { RegistarEmprestimoValidation } from '../../../interfaces/validation/Livro/RegistrarEmprestimoValidation';
 import { getLivroByCodigo, reservaLivro } from '../../../services/LivroService';
@@ -121,6 +122,7 @@ const ReservaLivros: React.FC = () => {
         {!!searchedBook &&
           <LivroCard livro={searchedBook} />
         }
+        <BackButton />
       </div>
     </>
   )

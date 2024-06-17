@@ -5,6 +5,7 @@ import { LivroResponse } from '../../../interfaces/entities/Livro/LivroResponse'
 import { getLivros } from '../../../services/LivroService';
 import LivroCard from './LivroCard';
 import './styles.css';
+import BackButton from '../../../components/BackButton';
 
 const CatalogoLivros: React.FC = () => {
 
@@ -37,6 +38,7 @@ const CatalogoLivros: React.FC = () => {
             </>
           }
         </div>
+        <BackButton/>
       </div>
     </>
   )

@@ -34,7 +34,7 @@ const RoutesApp: React.FC = () => {
           <Page content={<CatalogoLivros />} />
         }
       />
-      <Route path="/livros/reserva" element=
+      <Route path="/reserva" element=
         {
           <Page content={<ReservaLivros />} />
         }

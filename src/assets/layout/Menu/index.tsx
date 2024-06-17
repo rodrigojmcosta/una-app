@@ -1,4 +1,4 @@
-import { faBook, faCheck, faHome, faReceipt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAdd, faBook, faCheck, faHome, faReceipt, faUser } from '@fortawesome/free-solid-svg-icons';
 import MenuListButton from '../../../components/MenuListButton';
 import MenuSubItem from '../../../components/MenuSubItem';
 import MenuSubList from '../../../components/MenuSubList';
@@ -29,6 +29,7 @@ function Menu() {
                 Cadastrar um livro
               </MenuSubItem>
             </MenuSubList>
+            <MenuListButton icon={faAdd} to='/reserva'>Cadastrar Reserva</MenuListButton>
             <MenuListButton icon={faReceipt} to='/pendencias'>Pendências</MenuListButton>
             <MenuListButton icon={faCheck} to='/devolucao'>Registrar devolução</MenuListButton>
           </ul>

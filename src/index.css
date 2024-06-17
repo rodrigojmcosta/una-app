@@ -24,6 +24,34 @@ code {
   gap: 30px;
 }
 
+.search-button {
+	border: none;
+	background: transparent;
+	text-decoration: none;
+	color: #316fa1;
+	text-align: start;
+	width: fit-content;
+  margin-left: 10px;
+
+	/* Body/Urderline */
+	font-family: 'Unimed-Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px; /* 24px */
+}
+
+.search-button:hover {
+	cursor: pointer;
+	color: #63a8e0;
+  background-color: #FFFF;
+  border-radius: 10px;
+}
+
+.search-button svg {
+	color: #316fa1;
+}
+
 .back-button {
 	border: none;
 	background: transparent;
@@ -42,10 +70,11 @@ code {
 
 .back-button:hover {
 	cursor: pointer;
+	color: #626466;
 }
 
 .back-button svg {
-	color: #316fa1;
+	color: #28292b;
 }
 
 /*Estilos aplicados aos exercícios*/

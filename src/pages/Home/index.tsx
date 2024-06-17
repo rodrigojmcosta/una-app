@@ -1,4 +1,4 @@
-import { faAdd, faBookAtlas, faBookOpen, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faAdd, faBookAtlas, faBookOpen, faReceipt, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FeatureCard from './FeatureCard';
@@ -22,6 +22,9 @@ const Home: React.FC = () => {
         />
         <FeatureCard feature={"Cadastrar Reserva"} icon={faAdd}
           to={() => navigate("/livros/reserva")} iconDimensionClass='fa-icon32x32'
+        />
+        <FeatureCard feature={"Consultar Pendências"} icon={faReceipt}
+          to={() => navigate("/pendencias")} iconDimensionClass='fa-icon32x32'
         />
       </div>
     </div>

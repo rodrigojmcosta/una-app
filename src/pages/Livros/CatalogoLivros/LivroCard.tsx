@@ -1,8 +1,9 @@
 import { Divider } from "@mui/material";
+import { sxDivider } from "../../../assets/styles/CommonSxProps";
 import { LivroCardProps } from "../../../interfaces/props/LivroCardProps";
+import { cpfMask } from "../../../utils/CpfMask";
 import LivroDetailFrame from "./LivroDetailFrame";
 import './styles.css';
-import { sxDivider } from "../../../assets/styles/CommonSxProps";
 
 const LivroCard: React.FC<LivroCardProps> = ({ livro }) => {
 
@@ -38,10 +39,10 @@ const LivroCard: React.FC<LivroCardProps> = ({ livro }) => {
           label='Ano: '
           value={livro.Ano.toString()}
         />
-        <Divider sx={sxDivider}/>
+        <Divider sx={sxDivider} />
         <LivroDetailFrame
           label='CPF do atual empossado: '
-          value={livro.CPFAluno || '-'}
+          value={!!livro.CPFAluno ? cpfMask(livro.CPFAluno) : '-'}
         />
         <LivroDetailFrame
           label='Status: '

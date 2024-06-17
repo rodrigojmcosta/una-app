@@ -113,7 +113,7 @@ const ReservaLivros: React.FC = () => {
               inputProps={{ maxLength: 9 }}
               sx={sxInputSmall}
             />
-            <button className="back-button" onClick={findLivroByCodigo}>
+            <button className="search-button" onClick={findLivroByCodigo}>
               <u>Buscar</u> <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </Box>

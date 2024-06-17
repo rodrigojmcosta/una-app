@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import CadastroLivros from '../pages/Livros/CadastroLivros';
 import CatalogoLivros from '../pages/Livros/CatalogoLivros';
 import ReservaLivros from '../pages/Livros/ReservaLivros';
+import Pendencias from '../pages/Pendencias';
 
 const RoutesApp: React.FC = () => {
 
@@ -35,6 +36,11 @@ const RoutesApp: React.FC = () => {
       <Route path="/livros/reserva" element=
         {
           <Page content={<ReservaLivros />} />
+        }
+      />
+      <Route path="/pendencias" element=
+        {
+          <Page content={<Pendencias />} />
         }
       />
       {/* <Route path="/pokemon" element=

@@ -53,3 +53,13 @@ export const getLivroByCodigo = async (codigo: number): Promise<Response | null>
     return null;
   }
 };
+
+export const getPendencias = async (): Promise<Response | null> => {
+  try {
+    const response = await apiBase.get('/pendencias');
+    return response;
+  } catch (error) {
+    console.log({ error });
+    return null;
+  }
+};

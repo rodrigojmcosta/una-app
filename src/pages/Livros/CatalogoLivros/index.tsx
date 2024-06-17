@@ -40,9 +40,10 @@ const CatalogoLivros: React.FC = () => {
       const nomeLivro = livro.NomeLivro.toLowerCase();
       const editora = livro.Editora.toLowerCase();
       const autor = livro.Autor.toLowerCase();
+      const categoria = livro.Categoria.toLowerCase();
       const filterLower = filterText.toLowerCase();
 
-      return nomeLivro.includes(filterLower) || editora.includes(filterLower) || autor.includes(filterLower);
+      return nomeLivro.includes(filterLower) || editora.includes(filterLower) || autor.includes(filterLower) || categoria.includes(filterLower);
     });
   };
 

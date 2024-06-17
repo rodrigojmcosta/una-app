@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Page from '../assets/layout/Page';
 import Home from '../pages/Home';
-import PokemonPage from '../pages/PokemonPage';
+import CadastroAlunos from '../pages/CadastroAlunos';
 
 const RoutesApp: React.FC = () => {
 
@@ -14,11 +14,16 @@ const RoutesApp: React.FC = () => {
           <Page content={<Home />} />
         }
       />
-      <Route path="/pokemon" element=
+      <Route path="/alunos/cadastro" element=
+        {
+          <Page content={<CadastroAlunos />} />
+        }
+      />
+      {/* <Route path="/pokemon" element=
         {
           <Page content={<PokemonPage />} />
         }
-      />
+      /> */}
       {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   );

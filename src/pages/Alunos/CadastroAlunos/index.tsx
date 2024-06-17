@@ -1,12 +1,11 @@
 import { Box, Button, OutlinedInput, Typography } from '@mui/material';
 import { FormikProps, useFormik } from 'formik';
-import { sxButton, sxFormBox, sxFormError, sxInputSmall, sxLabel, sxLabeledOutlinedInput, sxTitle } from '../../assets/styles/CommonSxProps';
-import { CadastrarAlunoRequest } from '../../interfaces/entities/Aluno/CadastrarAlunoRequest';
-import { CadastrarAlunoValidation } from '../../interfaces/validation/Aluno/CadastrarAlunoValidation';
-import { cadastrarFichaAluno } from '../../services/AlunoService';
-import { cellPhoneMask } from '../../utils/CellPhoneMask';
-import { cpfMask } from '../../utils/CpfMask';
-import './styles.css';
+import { sxButton, sxFormBox, sxFormError, sxInputSmall, sxLabel, sxLabeledOutlinedInput, sxTitle } from '../../../assets/styles/CommonSxProps';
+import { CadastrarAlunoRequest } from '../../../interfaces/entities/Aluno/CadastrarAlunoRequest';
+import { CadastrarAlunoValidation } from '../../../interfaces/validation/Aluno/CadastrarAlunoValidation';
+import { cadastrarFichaAluno } from '../../../services/AlunoService';
+import { cellPhoneMask } from '../../../utils/CellPhoneMask';
+import { cpfMask } from '../../../utils/CpfMask';
 
 const CadastroAlunos: React.FC = () => {
 

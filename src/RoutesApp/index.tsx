@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Page from '../assets/layout/Page';
+import CadastroAlunos from '../pages/Alunos/CadastroAlunos';
+import CadastroLivros from '../pages/Livros/CadastroLivros';
 import Home from '../pages/Home';
-import CadastroAlunos from '../pages/CadastroAlunos';
 
 const RoutesApp: React.FC = () => {
 
@@ -17,6 +18,11 @@ const RoutesApp: React.FC = () => {
       <Route path="/alunos/cadastro" element=
         {
           <Page content={<CadastroAlunos />} />
+        }
+      />
+      <Route path="/livros/cadastro" element=
+        {
+          <Page content={<CadastroLivros />} />
         }
       />
       {/* <Route path="/pokemon" element=

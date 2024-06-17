@@ -23,3 +23,13 @@ export const cadastraLivro = async (livroData: CadastrarLivroRequest): Promise<R
     return error.response;
   }
 };
+
+export const getLivros = async (): Promise<Response | null> => {
+  try {
+    const response = await apiBase.get('/livros');
+    return response;
+  } catch (error) {
+    console.log({ error });
+    return null;
+  }
+};

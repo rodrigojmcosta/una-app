@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           to={() => navigate("/livros/cadastro")} iconDimensionClass='fa-icon32x32'
         />
         <FeatureCard feature={"Consultar Livros"} icon={faBookAtlas}
-          to={() => navigate("/")} iconDimensionClass='fa-icon32x32'
+          to={() => navigate("/livros/catalogo")} iconDimensionClass='fa-icon32x32'
         />
         <FeatureCard feature={"Adicionar Empréstimo"} icon={faAdd}
           to={() => navigate("/")} iconDimensionClass='fa-icon32x32'

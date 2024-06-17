@@ -4,6 +4,7 @@ import Page from '../assets/layout/Page';
 import CadastroAlunos from '../pages/Alunos/CadastroAlunos';
 import CadastroLivros from '../pages/Livros/CadastroLivros';
 import Home from '../pages/Home';
+import CatalogoLivros from '../pages/Livros/CatalogoLivros';
 
 const RoutesApp: React.FC = () => {
 
@@ -23,6 +24,11 @@ const RoutesApp: React.FC = () => {
       <Route path="/livros/cadastro" element=
         {
           <Page content={<CadastroLivros />} />
+        }
+      />
+      <Route path="/livros/catalogo" element=
+        {
+          <Page content={<CatalogoLivros />} />
         }
       />
       {/* <Route path="/pokemon" element=

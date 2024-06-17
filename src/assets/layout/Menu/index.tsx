@@ -25,7 +25,7 @@ function Menu() {
               </MenuSubItem>
             </MenuSubList>
             <MenuSubList icon={faBook} to='livros' name="Livros">
-              <MenuSubItem to='/livros/consulta'>
+              <MenuSubItem to='/livros/catalogo'>
                 Lista de livros
               </MenuSubItem>
               <MenuSubItem to='/livros/cadastro'>

@@ -26,7 +26,7 @@ export const cadastraLivro = async (livroData: CadastrarLivroRequest): Promise<R
 
 export const reservaLivro = async (cpfAluno: string, codigoLivro: number): Promise<Response | null> => {
   try {
-    const response = await apiBase.post(`/reservar/${codigoLivro}/${cpfAluno}`);
+    const response = await apiBase.post(`/livros/reservar/${codigoLivro}/${cpfAluno}`);
     return response;
   } catch (error: any) {
     console.log({ error });
@@ -55,7 +55,7 @@ export const getLivroByCodigo = async (codigo: number): Promise<Response | null>
 
 export const getPendencias = async (): Promise<Response | null> => {
   try {
-    const response = await apiBase.get('/pendencias');
+    const response = await apiBase.get('/livros/pendencias');
     return response;
   } catch (error) {
     console.log({ error });
@@ -65,7 +65,7 @@ export const getPendencias = async (): Promise<Response | null> => {
 
 export const devolveLivro = async (codigoLivro: number): Promise<Response | null> => {
   try {
-    const response = await apiBase.post(`/devolver/${codigoLivro}`);
+    const response = await apiBase.post(`/livros/devolver/${codigoLivro}`);
     return response;
   } catch (error: any) {
     console.log({ error });

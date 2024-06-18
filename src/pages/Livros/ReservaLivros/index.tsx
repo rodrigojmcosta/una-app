@@ -35,8 +35,9 @@ const ReservaLivros: React.FC = () => {
 
   const reservarLivro = async (cpfAluno: string, codigoLivro: string) => {
     const response = await reservaLivro(cpfAluno, Number(codigoLivro));
-    if (response?.status === 201) {
+    if (response?.status === 200) {
       alert('Livro reservado com sucesso!');
+      findLivroByCodigo();
     } else {
       alert(response?.data || 'Erro ao realizar reserva. Tente novamente em instantes');
     }

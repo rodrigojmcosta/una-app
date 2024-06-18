@@ -71,6 +71,15 @@ export const sxLabeledOutlinedInput: SxProps = {
   }
 }
 
+export const sxFilterSelect: SxProps = {
+  fontFamily: 'sans-serif', 
+  color: '#383838', 
+  width: '300px',
+  backgroundColor: '#FFFF',
+  fontSize: '14px', 
+  svg: {color: '#383838'},
+}
+
 export const sxInputLarge: SxProps = {
   fontFamily: 'sans-serif',
   color: '#383838',

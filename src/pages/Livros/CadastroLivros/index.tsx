@@ -1,13 +1,18 @@
-import { Box, Button, OutlinedInput, Typography } from '@mui/material';
+import { Box, Button, MenuItem, OutlinedInput, Select, Typography } from '@mui/material';
 import { FormikProps, useFormik } from 'formik';
-import { sxButton, sxFormBox, sxFormError, sxInputSmall, sxLabel, sxLabeledOutlinedInput, sxTitle } from '../../../assets/styles/CommonSxProps';
+import { sxButton, sxFilterSelect, sxFormBox, sxFormError, sxInputSmall, sxLabel, sxLabeledOutlinedInput, sxTitle } from '../../../assets/styles/CommonSxProps';
+import BackButton from '../../../components/BackButton';
 import { CadastrarLivroRequest } from '../../../interfaces/entities/Livro/CadastrarLivroRequest';
 import { CadastrarLivroValidation } from '../../../interfaces/validation/Livro/CadastrarLivroValidation';
 import { cadastraLivro } from '../../../services/LivroService';
 import { onlyNumbers } from '../../../utils/OnlyNumbers';
-import BackButton from '../../../components/BackButton';
 
 const CadastroLivros: React.FC = () => {
+
+  const generoList = [
+    'Ação', 'Aventura', 'Biografia', 'Ciência', 'Fantasia',
+    'História', 'Mistério', 'Romance', 'Terror', 'Thriller'
+  ];
 
   const formik = useFormik<CadastrarLivroRequest>({
     initialValues: {
@@ -32,7 +37,7 @@ const CadastroLivros: React.FC = () => {
   const cadastrarLivro = async (livro: CadastrarLivroRequest) => {
     const response = await cadastraLivro(livro);
     if (response?.status === 201) {
-      alert('Livro cadastrado com sucesso!'); 
+      alert('Livro cadastrado com sucesso!');
     } else {
       console.error(response);
     }
@@ -146,20 +151,20 @@ const CadastroLivros: React.FC = () => {
             </Box>
             <Box sx={sxLabeledOutlinedInput}>
               <Typography component='label' sx={sxLabel}>Categoria</Typography>
-              <Box display={'flex'} flexDirection={'row'}>
-                <OutlinedInput
-                  id='categoria'
-                  placeholder='Digite o categoria'
-                  type={'text'}
-                  value={formik.values.categoria}
-                  onChange={(e) => { formik.setFieldValue('categoria', e.target.value) }}
-                  name='categoria'
-                  error={!!formik.errors.categoria}
-                  maxRows={1}
-                  inputProps={{ maxLength: 14 }}
-                  sx={sxInputSmall}
-                />
-              </Box>
+              <Select
+                id='categoria'
+                value={formik.values.categoria}
+                renderValue={
+                  formik.values.categoria !== "" ? undefined : () => <span className='placeholder'>Selecione a categoria</span>
+                }
+                displayEmpty
+                onChange={(e) => formik.setFieldValue('categoria', e.target.value)}
+                sx={sxFilterSelect}
+              >
+                {generoList.map((genero, index) => (
+                  <MenuItem key={index} value={genero}>{genero}</MenuItem>
+                ))}
+              </Select>
               <Typography sx={sxFormError}>{formik.errors.categoria}</Typography>
             </Box>
             <Box sx={sxLabeledOutlinedInput}>
@@ -188,7 +193,7 @@ const CadastroLivros: React.FC = () => {
             >
               <Typography>CADASTRAR</Typography>
             </Button>
-            <BackButton/>
+            <BackButton />
           </Box>
         </form>
       </div>
